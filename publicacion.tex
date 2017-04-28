@@ -150,7 +150,7 @@
 %\usepackage[spanish]{babel}
 \usepackage{booktabs}
 \usepackage{listings}
-
+\usepackage{lipsum}  
 \usepackage{tabularx}
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -183,22 +183,21 @@ Cuenca, Ecuador.}
 
 
 \begin{abstract}
-The abstract goes here.
+\lipsum[2-2]
 \end{abstract}
 % no keywords
 
-\IEEEpeerreviewmaketitle
+\IEEEpeerreviewmaketitle 
 
 \section{Introducción}
 \label{sec:introduccion}
-%En las instituciones de educación superior (IES), así como en otras instituciones asociada como bibliotecas se almacenan una gran cantidad de producción científica y académica dentro de repositorios digitales. Esta producción está compuesta principalmente por los  recursos bibliográficos generados dentro de la institución tales como tesis, artículos, trabajos de pregrado o postgrado, entre otros, que reflejan el trabajo realizado tanto de profesores, investigadores como de alumnos dentro de estas instituciones. En la actualidad gracias a las tecnologías  semánticas y proyectos conjuntos de integración  dichos repositorios han dado un paso hacia el futuro, pasando de lo que comúnmente eran silos aislados de información, a formar parte de  una red de  repositorios accesibles para todo público a través de la web. Un ejemplo  de esto se puede apreciar en el trabajo realizado por el GTR\footnote{\url{http://gtrepositorios.cedia.org.ec/}} en Ecuador, que con el apoyo de la institución REDCEDIA\footnote{\url{https://www.cedia.edu.ec}} ha convertido y publicado los datos disponibles de un gran número de repositorios institucionales de universidades a un formato compatible con los  principios de Linked Data\footnote{cambiar: \url{Datahub.io}}. Este nuevo sistema de representación de  la información no solo  ha permitido que estos repositorios aislados  puedan ser accesibles de forma global e interoperable entre sí, sino que también  han dado un importante paso hacia la mejora en  la visibilidad  del trabajo institucional,  tanto a nivel interno  como interinstitucional. Mediante la aplicación de estas tecnologías ahora es más sencillo la detección trabajos conjuntos entre  universidades, verificar el aporte de investigadores en varias instituciones e incluso tener un rastreo de las actividades de un estudiante que puede seguir sus estudios posteriores (postgrado) en otras instituciones, entre otras.  Aunque, las ventajas de emplear estas tecnologías son evidentes, este incremento de información y su centralización ha traído consigo  nuevos retos a superar para sacar el máximo provecho de estas bases digitales. Uno de estos retos  consiste en  la dificultad para  la identificación plena de  los  autores,  provocado principalmente por la representación ambigua y variable de un autor al ser  representado únicamente por su nombre.   Esta práctica, común en el medio,  genera que las tareas de  reconocimiento o asignación  de autores con sus obras a través de varias fuentes o incluso sobre una misma fuente, sea una tarea compleja y laboriosa que en muchos casos es realizada de forma manual y en la mayoría de los casos  propensa a errores. Este es un problema común que se encuentra en bases digitales y es más laborioso conforme aumenta el número de autores y sus obras \cite{Lee:2007:YCC:1323688.1323690}. Este problema ha sido abordado  por múltiples trabajos  en la comunidad científica  bajo la denominación de desambiguación de nombres de autores (Author Name Disambiguation, AND).
-Bibliotecas académicas almacenan en sus repositorios digitales una gran cantidad de recursos de producción científica y académica. Está información es ingresada manualmente o es extraída de bibliotecas digitales y desambiguar nombres de autores (Author Name Disambiguation, AND) es deseable porque ayuda, por ejemplo, a procesos de búsqueda cómo encontrar artículos publicados por una específica persona o en la integración de información; ésto es un desafío para bibliotecas digitales. Los usuarios normalmente tienen que tratar con resultados de una búsqueda para encontrar el autor correcto. Además, desambiguar nombres ayuda a realizar estudios bibliométricos debido a que existe una correcta atribución de trabajos científicos y también se puede descubrir nuevo conocimiento usando tecnicas de mineria de datos. 
+En trabajos anteriores, se abordó el problema de integración de fuentes bibliográficas a través de tecnologías semánticas, tal como se describe en \cite{segarra2016integration} para repositorios digitales y en \cite{SUMBA2016149} para librerías digitales. En este contexto, han surgido varios problemas principalmente relacionados con la identificación única de recursos al ser integrados, provocados por la duplicación y las diferentes representaciones que un recurso puede tener. Este problema es especialmente relevante en el caso de autores, debido a que dificulta tareas como reconocimiento y asignación correcta de obras de un autor, que son indispensables en actividades tales como estudios bibliométricos y descubrimiento de nuevo conocimiento. Este problema ha sido abordado por múltiples trabajos en la comunidad científica bajo la de denominación de desambiguación de nombres de autores (Author Named Disambiguation, AND).
 
-%La ambigüedad de nombres puede ser a causa de varios factores como errores de ortografía, inconsistencias al ingresar datos, variaciones del nombre o uso de iniciales; estos factores pueden ser englobados en tres grupos. El primero es cuando varias personas comparten el mismo nombre (homónimos), en el segundo grupo están todas las representaciones del nombre de un autor (sinónimos) como por ejemplo ``Mauricio Espinoza'' y ``M. Espinoza'', y errores tipográficos o ortográficos se encuentran en el tercer grupo. Además del nombre, se puede extraer  otras características del autor que agreguen el conocimiento necesario para determinar si dos autores son o no la misma persona. Procesos de desambiguación deben ser automaticos debido a que la desambiguación manual es muy costosa ya sea a pequeña o gran escala y  peor aún, cuando se tiene casos de nombres comunes ya que existe mucha incertidumbre. En el caso particular que se utiliza tecnologías semánticas en la representación de los  datos de repositorios bibliográficos, el problema de desambiguación amerita gran atención. Esto debido a que los datos  adquieren un nivel superior de información, ya que no son considerados únicamente como un campo asociado a un documento, sino que se convierten en entidades perfectamente  identificables en la web \cite{bizer2009linked}. Adicionalmente, la naturaleza propia de Linked Data, impulsa a la generación de enlaces entre recursos, para aumentar el descubrimiento de información, que puede verse afectada si existe una gran cantidad de ambigüedad  entre  autores.
-La ambigüedad de nombres puede ser a causa de varios factores como errores de ortografía, inconsistencias al ingresar datos, variaciones del nombre o uso de iniciales; estos factores pueden ser englobados en tres grupos. El primero es cuando varias personas comparten el mismo nombre (homónimos), en el segundo grupo están todas las representaciones del nombre de un autor (sinónimos) como por ejemplo ``Mauricio Espinoza'' y ``M. Espinoza'', y errores tipográficos o ortográficos se encuentran en el tercer grupo. Además del nombre, se puede extraer  otras características del autor que agreguen el conocimiento necesario para determinar si dos autores son o no la misma persona. Procesos de desambiguación deben ser automáticos debido a que la desambiguación manual es muy costosa ya sea a pequeña o gran escala y  peor aún, cuando se tiene casos de nombres comunes, ya que la incertidumbre aumenta. 
+%Bibliotecas académicas almacenan en sus repositorios digitales una gran cantidad de recursos de producción científica y académica. Está información es ingresada manualmente o es extraída de bibliotecas digitales y desambiguar nombres de autores (Author Name Disambiguation, AND) es deseable porque ayuda, por ejemplo, a procesos de búsqueda cómo encontrar artículos publicados por una persona específica o en la integración de información; ésto es un desafío para bibliotecas digitales. Como consecuencia, los usuarios normalmente tienen que tratar con resultados de una búsqueda para encontrar el autor correcto. Además, desambiguar nombres ayuda a realizar estudios bibliométricos porque existe una correcta atribución de trabajos científicos y también se puede descubrir nuevo conocimiento usando técnicas de minería de datos. 
 
-En el presente trabajo, se presenta un proceso para desambiguar autores entre librerías digitales usando tecnologías semánticas. Haciendo uso de Linked Data \cite{bizer2009linked} se genera enlaces entre recursos de autores cuando se trata de la misma persona, estos enlaces son generados en base a distancias semánticas. Este proceso planteado ha sido probado para desambiguar autores sobre repositorios digitales de instituciones educativas y librerias digitales. % , obteniendo resultados aceptables tales como se presentan en la sección de evaluación. 
-El presente trabajo ha sido organizado de la siguiente manera: en la sección \ref{sec:antecedentes_trabajos_relacionados} se presenta los antecedentes y trabajo relacionado. En la sección \ref{sec:proceso_desambiguacion_semantica} se presentan los aspectos destacados de la  propuesta planteada y el aporte realizado en este campo de investigación. En la sección \ref{sec:evaluacion_resultados}  se presenta una breve descripción del proceso de evaluación y un resumen de los resultados obtenidos. En la sección \ref{sec:conclusion} se  describe las conclusiones obtenidas en el presente trabajo, así como los posibles trabajos futuros.
+La ambigüedad de nombres puede ser a causa de varios factores como errores ortográficos, inconsistencias al ingresar datos, variaciones del nombre o uso de iniciales; estos factores pueden ser englobados en tres grupos. El primero es cuando varias personas comparten el mismo nombre (homónimos), en el segundo grupo están todas las representaciones del nombre de un autor (sinónimos) como por ejemplo ``Mauricio Espinoza'' y ``M. Espinoza'', y errores tipográficos o ortográficos se encuentran en el tercer grupo. Además del nombre, se puede extraer  otras características del autor que agreguen el conocimiento necesario para determinar si dos registros hacen referencia o no la misma persona. Es deseable que estos procesos de desambiguación sean automáticos debido a que la desambiguación manual es muy costosa en cuanto a tiempo ya sea a pequeña o gran escala y  peor aún, cuando se tiene casos de nombres comunes, ya que la incertidumbre aumenta. 
+
+En el presente trabajo, se plantea un proceso para desambiguar autores entre fuentes biblíograficas digitales usando tecnologías semánticas, el cual consiste en la generación de enlaces \cite{bizer2009linked} entre recursos que representan a la misma persona. Estos enlaces son generados en base a estrategias sintacticas y semánticas. Este proceso ha sido probado desambigüando autores en repositorios digitales de instituciones educativas y librerías digitales. Este trabajo ha sido organizado de la siguiente manera: en la sección \ref{sec:antecedentes_trabajos_relacionados} se presenta los antecedentes y trabajo relacionado. En la sección \ref{sec:proceso_desambiguacion_semantica} se presentan los aspectos destacados de la  propuesta planteada y el aporte realizado en este campo de investigación. En la sección \ref{sec:resultados}  se presenta los resultados obtenidos. En la sección \ref{sec:conclusion} se  describe las conclusiones, así como posibles trabajos futuros.
 
 \section{Antecedentes y trabajos relacionados}
 \label{sec:antecedentes_trabajos_relacionados}
@@ -223,7 +222,7 @@ En esta sección se describen algunas características distintivas de los reposi
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=2.5in]{problema}
+\includegraphics[width=3.5in]{problema}
 \caption{Problema de desambiguación}
 \label{fig:problema_desambiguacion}
 \end{figure}
@@ -239,12 +238,12 @@ Considerando que el enfoque de desambiguación planteado  considera la independe
 
 En cuanto al proceso en sí, se establecieron tres etapas principales tal como se presenta en la figura \ref{fig:etapas}, entre las que se destacan las etapas de  Caracterización de los autores, Enriquecimiento semántico y Evaluación. La primera etapa tiene por objetivo, obtener las características más importante de los autores que se van a desambiguar, recopilando desde el repositorio digital afiliación, metadatos de sus documentos y co autores. El enriquecimiento semántico por su parte se encarga de descubrir información relevante a partir de toda la información disponible, detectando tópicos o áreas de interés y filtrando información poco útil. Finalmente en la etapa de evaluación se comparan semánticamente todos los autores (registros ambiguos) en base a varias métricas, lo que permite definir si efectivamente se tratan del mismo individuo. 
 
-\begin{figure}[!t]
+\begin{figure*}[!t]
 \centering
-\includegraphics[width=3.5in]{arquitectura}
+\includegraphics[width=0.8\textwidth]{arquitectura}
 \caption{Etapas de desambiguaci\'on de autores}
 \label{fig:etapas}
-\end{figure}
+\end{figure*}
 
 En las siguientes secciones se presentan  a más detalle cada una de las etapas presentadas, especificando los procesos que realizan y las consideraciones que han sido tomadas en cuenta en su desarrollo.  Con el fin de facilitar la comprensión del proceso se ejemplifica cada una de estas etapas con un ejemplo real de ambigüedad de entre autores, encontrado en los repositorios institucionales de las universidades del Ecuador.  Específicamente se tomará al autor ‘Mauricio Espinoza Mejía’, docente e investigador de la Universidad de Cuenca que ha realizado varias colaboraciones con otras instituciones y del cual se conocen varias representaciones ambiguas dentro de los repositorios.
 
@@ -356,8 +355,7 @@ r(i) = \sum_{j!=i}^{j<n} NWD(p_i, p_j)
 
 El criterio seguido para definir el número de palabras clave que deban sobrepasar el filtro se definió mediante una regla práctica basada en las observaciones realizadas sobre los datos. Se definió que para un conjunto N de palabras clave se debería seleccionar (2*ln N) palabras más relevantes para ser usadas por la siguiente etapa. Esta regla ofrece un crecimiento amortiguado del número de palabras clave a ser usados, de manera que autores con pocas palabras clave no las pierdan debido al filtrado semántico y al mismo tiempo que autores con demasiadas palabras clave limiten el número de estas.
 
-\section{Evaluación y Resultados}
-\label{sec:evaluacion_resultados}
+\subsection{Evaluación}
 
 \begin{figure}[!t]
 \centering
@@ -368,7 +366,7 @@ El criterio seguido para definir el número de palabras clave que deban sobrepas
 
 Como se presenta en la figura \ref{fig:comparacion} la comparación final entre los autores y descubrimiento de enlaces entre estos se realiza en dos etapas. En la primera etapa se determinan autores candidatos que podrían tratarse del mismo individuo a través de la detección de nombres similares. En la segunda se realiza una comparación semántica entre los candidatos con la información obtenida luego del proceso de análisis semántico (Afiliación, coautores y palabras clave). Finalmente, los candidatos que superen un umbral mínimo de distancia semántica son considerados equivalentes y se crean enlaces para estos. A continuación se detallan estas dos etapas con las métricas que utilizan.
 
-\subsection{Autores candidatos}
+\subsubsection{Autores candidatos}
 Existe un gran variedad de algoritmos para evaluar la similitud sintáctica entre dos cadenas de texto, sin embargo, los algoritmos basados en Tokens son los más utilizados para la detección de nombres similares. Estos algoritmos representan los nombres como conjuntos de palabras (tokens) y aplican operaciones de conjuntos para determinar su similitud. Ejemplos típicos de estos algoritmos usados en la comparación de nombres son Jaccard, Overlap, tal como se trata en  \cite{huynh2013vietnamese}. No obstante, para cubrir de manera más general este problema es necesario agregar más características a estas métricas con el fin de hacerlas más flexibles a particularidades comunes en los nombres de personas como: Iniciales y abreviaturas \cite{shoaib2015improving}.
 
 En presente se plantea la utilización de una métrica híbrida que utiliza los enfoques de tokens, similitud de texto simple y manejo e iniciales y abreviaturas. Específicamente se plantea usar una versión adaptada de Jaccard para la comparación de nombres. Que se complementa con la  métrica de ‘Jaro-Winkler’ para la generación de  match flexibles entre tokens que trate problemas de iniciales y abreviaciones de los nombres. En el segmento de código \ref{eq:metrica} se presenta esta métrica de forma más formal.
@@ -382,7 +380,7 @@ $N$: Número total de tokens en $N1$ y $N2$.
 
 Para la detección la lista de autores candidatos a ser desambiguación se aplica esta métrica entre todos los autores detectados en los repositorios. Los pares de autores que sobrepasen un umbral de similitud del nombre de $0.8$  se agregan a la lista de candidato a desambiguar.
 
-\subsection{Comparación semántica}
+\subsubsection{Comparación semántica}
 La comparación de candidatos se realiza en tres partes:  afiliación, coautores y palabras clave. Para cada una se han definido métricas simples  que aportan conocimiento de la relación entre los candidatos. Al finalizar la evaluación de cada una estas se genera un índice único calculado a partir de las tres métricas, el cual se utiliza para determinar si se trata o no del mismo autor.   A continuación se explica cada una de las partes de esta comparación.
 
 El factor de afiliación (FA) es el más simple de todos, simplemente si dos autores candidatos tiene la misma afiliación (pertenecen a la misma institución) el factor toma el valor de 0.9, caso contraro de 1 es asignado. Esta condición se basa en la suposición que si encontramos autores candidatos en un mismo repositorio es más probable que se traten de la misma persona. Si bien esta suposición puede parecer sesgada cuando se ve desde el punto de vista de bases digitales u otras fuentes de información, en realidad se elaboró considerando la naturaleza local de los repositorios digitales.
@@ -398,7 +396,8 @@ $P1N$: Es el número de palabras clave en $P1$.\\
 $P2N$: Numero de palabras clave en $P2$.
 
 Finalmente, la distancia total ponderada (DTP) se define como $DTP= FA*FC*ISPC$. Distancia que resume toda la información de dos autores y su cercanía semántica entre sí. A partir de este índice se aplica un filtrado simple con un umbral de 0.7. De manera que todos los pares de autores candidatos con un índice DTP menor a 0.7 son considerados el mismo individuo y por tanto enlazados a través de enlaces (sameAs).
-
+\section{Resultados}
+\label{sec:resultados}
 
 \section{Conclusión y trabajos futuros}
 \label{sec:conclusion}
